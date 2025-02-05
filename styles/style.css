@@ -1,5 +1,434 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-.page {
+
+
+
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-}
+ 
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content 1fr;
+    background-image: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    gap: 40px;
+  }
+    /* Стили блока header */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content 1fr;
+    block-size: max(668px, 100vh);
+    inline-size: 100%;
+    padding: var(--page-padding); 
+    position: relative;
+  }
+  
+  /* стили для уголков */
+  .decorated-zone::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-top: var(--decorated_zone-border);
+    border-right: var(--decorated_zone-border);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+  }
+  
+  .decorated-zone::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-bottom: var(--decorated_zone-border);
+    border-left: var(--decorated_zone-border);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  /* стили для меню */
+  
+  .header__theme-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    justify-content: end;
+    align-self: center;
+    
+    
+  }
+  
+  .header__theme-menu-button {
+    background-color: transparent;
+    color: var(--page_accent-color);
+    border: transparent;
+    text-transform: lowercase;
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    padding: 1.5px 13px 1.5px 13px;
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid #FF0070;
+    pointer-events: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid #FF0070;
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
+  
+  /* стили для REC */
+  
+  .header__heading-rec {
+    grid-row: 1;
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    color: var(--page_accent-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    
+    right: 20px;
+  }
+  
+  .header__heading-rec::before {
+    content: "rec";
+  }
+  
+  .header__heading-rec::after {
+    display: block;
+    inline-size: 0.5rem;
+    block-size: 0.5rem;
+    background-color: var(--page_accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--page_accent-color);
+    content: ""; 
+  }
+  
+  /* стили для заголовка и параграфа */
+  
+  .header__article-heading {
+    font-family: var(--font-family);
+    font-size: var(--main_heading-font-size);
+    font-weight: var(--page_heading-font-weight);
+    line-height: 95.7px;
+    text-align: left;
+    color: var(--main_heading-color);
+    text-shadow: 4px 4px var(--page_accent-color);
+    
+  
+  }
+  
+  .header__article-text {
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--page_heading-font-weight);
+    line-height: 23.4px;
+    text-align: left;
+    color: #000028;
+    background-color: var(--page_accent-color);
+    block-size: 117px;
+    align-self: center;
+  }
+  
+  
+  /* Стили для блока main*/
+  
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4;
+    gap: 50px;
+    padding: var(--page-padding); 
+    background-color: var(--page-background-color);
+  }
+  
+  .main__section {
+    display: grid;
+    gap: 20px;
+  }
+  
+  
+  
+  /* Стили для карточек блока main*/
+  
+  .main__section__article {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .main__section__article-heading {
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--page_heading-font-weight);
+    line-height: 23.4px;
+    text-align: left;
+    color: var(--page_accent-color);
+    background-color: transparent;
+    height: min-content;
+    
+  }
+  
+  .main__section__article-subheading {
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--page_heading-font-weight);
+    line-height: 23.4px;
+    text-align: left;
+    color: var(--page_subheading-color);
+    background-color: var(--page_accent-color);
+  
+  }
+  
+  .main__section__article-subheading-normal {
+    font-weight: 400;
+  }
+  
+  .main__section__article-text {
+    font-family: var(--font-family);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: left;
+    color: var(--page_article-text-color);
+    background-color: transparent;
+  }
+  
+  .main__section__article-text-link {
+    text-shadow: 2px 2px var(--page_accent-color);
+  }
+  
+  .main__section__article-text-link:focus {
+    border: 1px solid var(--page_article-text-color);
+  }
+  
+  .main__section__article-text-link:hover {
+    border-bottom:  1px solid var(--page_article-text-color);
+  }
+  
+  /* Стили для галереи блока main*/
+  
+  .main__section__gallery {
+    display: grid;
+    gap: 10px;
+    
+  
+  }
+  
+  .main__section__gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  /* Стили для блока footer */
+  
+  .footer {
+    padding: var(--page-padding); 
+    background-color: var(--page-background-color);
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    block-size: max(668px, 100vh);
+  }
+  
+  .footer__article-heading {
+    font-family: var(--font-family);
+    font-size: var(--main_heading-font-size);
+    font-weight: var(--page_heading-font-weight);
+    line-height: 95.7px;
+    text-align: left;
+    color: var(--main_heading-color);
+    text-shadow: 2px 2px var(--page_accent-color);
+    grid-row: 2;
+    
+  } 
+  
+  /* MEDIA querries */
+  
+  @media (width >= 768px) {
+    
+    /* Стили для блока HEADER*/
+    
+    .page {
+      gap: 60px;
+    }
+
+    .header {
+      padding-right: 20px;
+      padding-left: 0px;
+    }
+    
+    .header__article-text {
+      inline-size: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-self: end;
+    }
+  
+    .decorated-zone::before {
+      top: 20px;
+      right: 20px;
+    }
+  
+    .decorated-zone::after {
+      bottom: 20px;
+      left: 20px;
+    }
+  
+    .header__heading-rec {
+      top: 15px;
+      right: 35px;
+    }
+  
+    .header__article-heading {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      line-height: 99px;
+    }
+    
+    /* Стили для блока MAIN */
+    .main {
+      padding: 20px;
+    }
+    
+    .section__why {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+
+    }
+
+    .section__why-heading {
+        grid-row: 1 / 3;
+    }
+
+    .section__what-article-heading {
+      inline-size: 30%;
+    }
+    
+    .section__how {
+      grid-template-columns: 1fr 2fr;
+      
+      
+    }
+
+    .section__how-heading {
+      grid-row: 1 / 7;
+    }
+
+    
+    
+
+    
+
+    /* Стили для блока MAIN GALLERY*/
+    .main__section__gallery {
+      display: grid;
+      gap: 20px;
+
+    }
+
+    .main__section__gallery-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .sunset-pic {
+      grid-column: 1 / 3;
+    }
+
+    .tape-pic {
+      grid-row: 2 / 4;
+    }
+
+    .ice-cream-pic {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+
+    .street-pic {
+      grid-row: 3 / 4;
+      grid-column: 2 / 4;
+    }
+
+    /* Стили для блока FOOTER*/
+
+    .footer {
+      justify-content: center;
+    }
+
+  }
+  
+  @media (width >= 1024px) {
+    
+    .page {
+      gap: 60px;
+    }
+
+
+    .header {
+      padding: 20px 20px 20px 0px;
+    }
+
+    .header__theme-menu{
+      justify-items: center;
+      
+    }
+    
+    .header__theme-menu-list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+      inline-size: 230px;
+      align-self: start;
+    }
+
+    .main__section__articles-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 20px;
+    }
+
+    .section__what-article {
+      align-self: start;
+    }
+
+    .header__heading-rec {
+      top: 5px;
+    }
+  } 
+  
+  

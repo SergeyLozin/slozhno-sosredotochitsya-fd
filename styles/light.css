@@ -9,8 +9,59 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-image: url(/images/cover-image-light.png);
+  --main_heading-color: #FFC2E6;
+  --decorated_zone-border: 1px solid #353430;
+  --page_accent-color: #FF8DCB;
+  --page_subheading-color: #353430;
+  --page_article-text-color: #353430;
+  --page-background-color: #FFF1F7;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */ 
+  --background-image: url(/images/cover-image-light.png);
+  --main_heading-color: #FFC2E6;
+  --decorated_zone-border: 1px solid #353430;
+  --page_accent-color: #FF8DCB;
+  --page_subheading-color: #353430;
+  --page_article-text-color: #353430;
+  --page-background-color: #FFF1F7;   
+  }
+
+  .theme-auto .header__heading-rec {
+    display: none;
+  
+  } 
+  
+}
+
+
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
+
+.main {
+  background-color: var(--page-background-color);
+}
+
+.footer {
+  background-color: var(--page-background-color);
+}
+
+.decorated-zone::before {
+  border-top: var(--decorated_zone-border);
+  border-right: var(--decorated_zone-border);
+}
+
+.decorated-zone::after {
+  border-left: var(--decorated_zone-border);
+  border-bottom: var(--decorated_zone-border);
+}
+
+
+  .theme-light .header__heading-rec {
+    display: none;
+  }
