@@ -6,7 +6,7 @@
   --background-image: url(/images/cover-image-dark.png);
   --font-family: IBM Plex Mono, Arial, Helvetica, sans-serif;
   --text-font-size: 18px;
-  --page-padding: 10px;
+  --page-padding: 0px 10px 0px 10px;
   --main_heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --main_heading-color:  #DB00FF;
   --page_heading-font-weight: 700;
