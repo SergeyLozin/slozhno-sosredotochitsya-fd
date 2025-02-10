@@ -5,26 +5,21 @@
 */
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-
-   :root {
-  --background-image: url(/images/cover-image-dark.png);
+  --background-image: url(../images/cover-image-dark.png);
   --font-family: IBM Plex Mono, Arial, Helvetica, sans-serif;
   --text-font-size: 18px;
-  --page-padding: 10px;
-  --main_heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --main_heading-color:  #DB00FF;
-  --page_heading-font-weight: 700;
-  --decorated_zone-border: 1px solid #FF0070;
-  --page_accent-color: #FF0070;
-  --page_subheading-color: #000028;
-  --page_article-text-color: #F1B2CE;
+  --page-padding: 0px 10px;
+  --main-heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-heading-color:  #DB00FF;
+  --page-heading-font-weight: 700;
+  --decorated-zone-border: 1px solid #FF0070;
+  --page-accent-color: #FF0070;
+  --page-subheading-accent-color: #FF0070;
+  --page-subheading-color: #000028;
+  --page-article-text-color: #F1B2CE;
   --page-background-color: #000028;
  }
-}
+
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
