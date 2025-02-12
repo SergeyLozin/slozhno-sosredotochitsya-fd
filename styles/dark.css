@@ -6,18 +6,18 @@
 
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
-  --font-family: IBM Plex Mono, Arial, Helvetica, sans-serif;
-  --text-font-size: 18px;
-  --page-padding: 0px 10px;
-  --main-heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --main-heading-color:  #DB00FF;
-  --page-heading-font-weight: 700;
   --decorated-zone-border: 1px solid #FF0070;
   --page-accent-color: #FF0070;
   --page-subheading-accent-color: #FF0070;
   --page-subheading-color: #000028;
   --page-article-text-color: #F1B2CE;
   --page-background-color: #000028;
+  --button-color: #FF0070;
+  --button-active-outline: 1px solid #ff0070;
+  --button-focus-visible-border: 1px solid #ff0070;
+  --button-hover-outline: 1px solid rgba(255, 0, 112, 0.4);
+  --heading-accented-color: #000028;
  }
 
 

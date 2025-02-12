@@ -16,4 +16,9 @@
   --page-subheading-color: #000028;
   --page-article-text-color: #F1B2CE;
   --page-background-color: #000028;
+  --button-color: #FF0070;
+  --button-active-outline: 1px solid #ff0070;
+  --button-focus-visible-border: 1px solid #ff0070;
+  --button-hover-outline: 1px solid rgba(255, 0, 112, 0.4);
+  --heading-accented-color: #000028;
  }
