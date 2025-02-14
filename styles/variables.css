@@ -12,8 +12,9 @@
   --page-heading-font-weight: 700;
   --decorated-zone-border: 1px solid #FF0070;
   --page-accent-color: #FF0070;
-  --page-subheading-accent-color: #FF0070;
-  --page-subheading-color: #000028;
+  --page-accented-heading-color:#FF0070;
+
+  --page-subheading-text-color: #000028;
   --page-article-text-color: #F1B2CE;
   --page-background-color: #000028;
   --button-color: #FF0070;

@@ -3,14 +3,15 @@
   --main-heading-color: #FFC2E6;
   --decorated-zone-border: 1px solid #353430;
   --page-accent-color: #FF8DCB;
-  --page-subheading-accent-color: #353430;
-  --page-subheading-color: #353430;
+  --page-accented-heading-color:#353430;
+  --page-subheading-text-color: #353430;
   --page-article-text-color: #353430;
   --page-background-color: #fff1f7;
   --button-color: #353430;
   --button-active-outline: 1px solid #353430;
   --button-focus-visible-border: 1px solid #353430;
   --button-hover-outline: 1px solid rgba(50, 49, 45, 0.4);
+  --heading-accented-color: #353430;
 }
 
 @media (prefers-color-scheme:light) {
@@ -19,14 +20,15 @@
     --main-heading-color: #FFC2E6;
     --decorated-zone-border: 1px solid #353430;
     --page-accent-color: #FF8DCB;
-    --page-subheading-accent-color: #353430;
-    --page-subheading-color: #353430;
+    --page-accented-heading-color:#353430;
+    --page-subheading-text-color: #353430;
     --page-article-text-color: #353430;
     --page-background-color: #fff1f7;
     --button-color: #353430;
-  --button-active-outline: 1px solid #353430;
-  --button-focus-visible-border: 1px solid #353430;
-  --button-hover-outline: 1px solid rgba(50, 49, 45, 0.4);
+    --button-active-outline: 1px solid #353430;
+    --button-focus-visible-border: 1px solid #353430;
+    --button-hover-outline: 1px solid rgba(50, 49, 45, 0.4);
+    --heading-accented-color: #353430;
   }
 
   .theme-auto .heading-rec {
